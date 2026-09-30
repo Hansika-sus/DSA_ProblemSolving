@@ -1,0 +1,12 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+      
+        numbers = {}
+
+        for i in range(len(nums)):
+            needed = target - nums[i]
+
+            if needed in numbers:
+                return [numbers[needed], i]
+
+            numbers[nums[i]] = i
